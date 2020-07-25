@@ -5,7 +5,7 @@
 	<groupId>org.ml4j</groupId>
 	<artifactId>gpt-3-java-bindings</artifactId>
 	<packaging>jar</packaging>
-	<version>.0.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>gpt-3-java-bindings</name>
 	<properties>
 	</properties>
