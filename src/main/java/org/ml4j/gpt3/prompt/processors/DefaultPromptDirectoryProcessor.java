@@ -63,9 +63,6 @@ public class DefaultPromptDirectoryProcessor implements FileProcessor {
 		// Obtain the contents of the prompt file.
 		File promptFile = example.listFiles(file -> file.getPath().endsWith("prompt.txt"))[0];
 		String prompt = new String(Files.readAllBytes(promptFile.toPath()));
-		if (prompt.endsWith("\n")) {
-			prompt = prompt.substring(0, prompt.length() - 1);
-		}
 		// For each output file, extract the temperature from the file name, and read
 		// the contents
 		// of the file, splitting into multiple out strings.
