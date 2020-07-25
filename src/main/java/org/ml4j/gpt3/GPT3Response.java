@@ -16,9 +16,12 @@ package org.ml4j.gpt3;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * @author Michael Lavelle
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GPT3Response implements Serializable {
 
 	/**
