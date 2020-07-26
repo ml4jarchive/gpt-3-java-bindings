@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class QuestionAndAnswerTemplate {
 
 	private String defaultPremise;
+	private String premisePrefix;
 	private String premiseSuffix;
 	private String questionPrefix;
 	private String questionSuffix;
@@ -18,6 +19,14 @@ public class QuestionAndAnswerTemplate {
 
 	public void setDefaultPremise(String defaultPremise) {
 		this.defaultPremise = defaultPremise;
+	}
+	
+	public String getPremisePrefix() {
+		return premisePrefix;
+	}
+
+	public void setPremisePrefix(String premisePrefix) {
+		this.premisePrefix = premisePrefix;
 	}
 
 	public String getPremiseSuffix() {
