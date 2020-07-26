@@ -54,8 +54,11 @@ public class QuestionAndAnswerPromptBuilder {
 		String promptQuestion = question != null ? question : questionAndAnswerPrompt.getDefaultPromptQuestion();
 
 		StringBuilder out = new StringBuilder();
-		out.append(questionAndAnswerPrompt.getPremise());
-		out.append(template.getPremiseSuffix());
+		if (questionAndAnswerPrompt.getPremise() != null && questionAndAnswerPrompt.getPremise().length() > 0) {
+			out.append(template.getPremisePrefix());
+			out.append(questionAndAnswerPrompt.getPremise());
+			out.append(template.getPremiseSuffix());
+		}
 		for (QuestionAndAnswer qa : questionAndAnswerPrompt.getQuestionsAndAnswers()) {
 			String qaString = template.getQuestionPrefix() + qa.getQuestion() + template.getQuestionSuffix()
 					+ template.getAnswerPrefix() + qa.getAnswer() + template.getAnswerSuffix();
